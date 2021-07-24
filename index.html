@@ -1,120 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta charset='UTF-8' />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />
         <title>Password Generator</title>
-        <link rel="icon" href="img/logo.png" />
+        <link href='img/logo.png' rel='icon' />
         <!-- meta data -->
-        <meta name="description" content="Password generator app to give you strong password." />
+        <meta content='Password generator app to give you strong password.' name='description' />
         <!-- Google / Search Engine Tags -->
-        <meta itemprop="name" content="Password Generator" />
-        <meta itemprop="description" content="Password generator app to give you strong password." />
-        <meta itemprop="image" content="https://password-app.netlify.com/img/logo.png" />
+        <meta content='Password Generator' itemprop='name' />
+        <meta content='Password generator app to give you strong password.' itemprop='description' />
+        <meta content='https://password-app.netlify.com/img/logo.png' itemprop='image' />
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://password-app.netlify.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Password Generator" />
-        <meta property="og:description" content="Password generator app to give you strong password." />
-        <meta property="og:image" content="https://password-app.netlify.com/img/logo.png" />
+        <meta content='https://password-app.netlify.com/' property='og:url' />
+        <meta content='website' property='og:type' />
+        <meta content='Password Generator' property='og:title' />
+        <meta content='Password generator app to give you strong password.' property='og:description' />
+        <meta content='https://password-app.netlify.com/img/logo.png' property='og:image' />
         <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@Dev_Moath" />
-        <meta name="twitter:title" content="Password Generator" />
-        <meta name="twitter:description" content="Password generator app to give you strong password." />
-        <meta name="twitter:image" content="https://password-app.netlify.com/img/logo.png" />
-        <link rel="apple-touch-icon" sizes="128x128" href="img/logo.png" />
-        <script src="src/bundle.js"></script>
+        <meta content='summary_large_image' name='twitter:card' />
+        <meta content='@Dev_Moath' name='twitter:creator' />
+        <meta content='Password Generator' name='twitter:title' />
+        <meta content='Password generator app to give you strong password.' name='twitter:description' />
+        <meta content='https://password-app.netlify.com/img/logo.png' name='twitter:image' />
+        <link href='img/logo.png' rel='apple-touch-icon' sizes='128x128' />
+        <script src='src/bundle.js'></script>
+        <style>
+            .bg-custom {
+                background: linear-gradient(110deg, rgb(79, 80, 83) 6%, rgb(15, 21, 56) 95%);
+            }
+
+            .outline-none:focus,
+            .outline-none:active {
+                outline: none !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            .border-custom {
+                border-color: #ced4da;
+            }
+        </style>
     </head>
     <body>
-        <div class="container-fluid bg-custom vh-100">
-            <div class="d-flex align-items-center flex-column my-auto h-100 col-md-7 mx-auto">
-                <div class="my-4">
-                    <div class="text-center mb-2">
+        <div class='container-fluid bg-custom vh-100'>
+            <div class='d-flex align-items-center flex-column my-auto h-100 col-md-7 mx-auto'>
+                <div class='my-4'>
+                    <div class='text-center mb-2'>
                         <a
-                            href="https://twitter.com/Dev_Moath"
-                            class="btn btn-lg rounded-pill text-light bg-primary shadow-lg"
+                            class='btn btn-lg rounded-pill text-light bg-primary shadow-lg'
+                            href='https://twitter.com/Dev_Moath'
                         >
-                            <i class="fab fa-twitter fa-fw"></i>
+                            <i class='fab fa-twitter fa-fw'></i>
                         </a>
                         <a
-                            href="https://github.com/DevMoath"
-                            class="btn btn-lg rounded-pill text-light bg-dark shadow-lg ml-2"
+                            class='btn btn-lg rounded-pill text-light bg-dark shadow-lg ml-2'
+                            href='https://github.com/DevMoath'
                         >
-                            <i class="fab fa-github fa-fw"></i>
+                            <i class='fab fa-github fa-fw'></i>
                         </a>
                     </div>
                 </div>
-                <div class="card w-100 h-auto bg-light">
-                    <div class="card-header">
+                <div class='card w-100 h-auto bg-light'>
+                    <div class='card-header'>
                         <h4>Password Generator</h4>
                     </div>
-                    <div class="card-body">
-                        <div class="input-group mb-2 mx-auto border border-custom rounded">
+                    <div class='card-body'>
+                        <div class='input-group mb-2 mx-auto border border-custom rounded'>
                             <input
-                                type="text"
-                                class="form-control bg-transparent outline-none border-0 text-dark"
-                                style="font-size: 20px"
-                                id="result"
+                                class='form-control bg-transparent outline-none border-0 text-dark'
+                                id='result'
                                 readonly
+                                style='font-size: 20px'
+                                type='text'
                             />
-                            <div class="input-group-append">
+                            <div class='input-group-append'>
                                 <button
-                                    class="btn btn-outline-primary border-0 rounded outline-none"
-                                    type="button"
-                                    id="copy"
+                                    class='btn btn-outline-primary border-0 rounded outline-none'
+                                    id='copy'
+                                    type='button'
                                 >
-                                    <i class="far fa-clipboard fa-fw"></i>
+                                    <i class='far fa-clipboard fa-fw'></i>
                                 </button>
                             </div>
                         </div>
-                        <div class="mx-auto mt-3">
-                            <div class="alert alert-danger fade show d-none" role="alert" id="alert"></div>
-                            <div class="form-group d-flex justify-content-end">
-                                <label for="length" class="col-form-label w-100">Password length</label>
-                                <div class="">
+                        <div class='mx-auto mt-3'>
+                            <div class='alert alert-danger fade show d-none' id='alert' role='alert'></div>
+                            <div class='form-group d-flex justify-content-end'>
+                                <label class='col-form-label w-100' for='length'>Password length</label>
+                                <div class=''>
                                     <input
-                                        type="number"
-                                        class="form-control ml-auto"
-                                        id="length"
-                                        value="10"
-                                        min="8"
-                                        max="256"
+                                        class='form-control ml-auto'
+                                        id='length'
+                                        max='256'
+                                        min='8'
+                                        type='number'
+                                        value='10'
                                     />
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="uppercase" checked />
-                                    <label class="custom-control-label" for="uppercase">
+                            <div class='form-group'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input checked class='custom-control-input' id='uppercase' type='checkbox' />
+                                    <label class='custom-control-label' for='uppercase'>
                                         Include uppercase letters
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="lowercase" checked />
-                                    <label class="custom-control-label" for="lowercase">
+                            <div class='form-group'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input checked class='custom-control-input' id='lowercase' type='checkbox' />
+                                    <label class='custom-control-label' for='lowercase'>
                                         Include lowercase letters
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="number" checked />
-                                    <label class="custom-control-label" for="number">Include numbers</label>
+                            <div class='form-group'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input checked class='custom-control-input' id='number' type='checkbox' />
+                                    <label class='custom-control-label' for='number'>Include numbers</label>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="symbol" checked />
-                                    <label class="custom-control-label" for="symbol">Include symbols</label>
+                            <div class='form-group'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input checked class='custom-control-input' id='symbol' type='checkbox' />
+                                    <label class='custom-control-label' for='symbol'>Include symbols</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-primary d-block mx-auto" id="generate">Generate password</button>
+                    <div class='card-footer'>
+                        <button class='btn btn-primary d-block mx-auto' id='generate'>Generate password</button>
                     </div>
                 </div>
             </div>
